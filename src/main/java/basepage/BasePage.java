@@ -10,9 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.GlobalVariables;
-
 import static java.lang.Thread.sleep;
-
 
 public class BasePage {
 	protected WebDriver driver;

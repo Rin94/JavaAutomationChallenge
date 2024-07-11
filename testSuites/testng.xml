@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel = "tests" name="All Test Suite">
-
-    <listeners>
-        <listener class-name="TestComponents.Listeners"/>
-    </listeners>
-
-    <test name="Submit Order Test" thread-count="5" preserve-order="true">
+<suite name="Search Test Suite">
+    <test verbose="2" preserve-order="true" name="LiverpoolDemo">
         <classes>
             <class name="SearchTest.SearchTest">
-                <methods>
-                    <include name="submitOrder"/>
-                </methods>
+            <methods>
+                <include name="test_searching_product_and_verify_product_suggestion"/>
+                <include name="test_verify_search_with_filters"/>
+                <include name="test_verify_search_by_category"/>
+            </methods>
             </class>
         </classes>
     </test>
