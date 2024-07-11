@@ -1,0 +1,16 @@
+[
+  {
+    "suggestion1": "PLAYSTATION",
+    "suggestion2": "PS5",
+    "suggestion3": "PS4",
+    "search1": "Play Station",
+    "search2": "Smart tv",
+    "tvBrand": "SONY",
+    "tvSize": "55",
+    "tvPrice": "10000",
+    "expectedCount": "3",
+    "category": "belleza",
+    "subCategory": "Perfumes Hombre",
+    "lotionBrand": "DIOR"
+  }
+]
