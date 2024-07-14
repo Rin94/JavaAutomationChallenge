@@ -73,4 +73,6 @@ public class CatalogPageStepDefinitions {
     public void clickInViewMoreBrands() {
         catalogPage.clickViewMoreBrandsLink();
     }
+
+
 }

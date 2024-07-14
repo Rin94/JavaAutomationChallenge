@@ -62,7 +62,7 @@ public class BasePage {
 	}
 	protected void delay(int duration) {
         try {
-            sleep((duration*1000));
+            sleep((duration * 1000L));
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

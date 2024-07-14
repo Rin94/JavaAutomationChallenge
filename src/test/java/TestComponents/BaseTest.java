@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.CurrentDateAndTime;
@@ -44,7 +45,9 @@ public class BaseTest {
 		}
 		else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver= new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("-headless");
+			driver= new FirefoxDriver(options);
 		}
 		driver.manage().window().maximize();
 		fis.close();

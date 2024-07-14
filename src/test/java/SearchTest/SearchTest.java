@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import TestComponents.BaseTest;
+import org.testng.asserts.SoftAssert;
 import utils.DataReader;
 import webstore.pages.*;
 

@@ -1,9 +1,9 @@
 # To Execute
 
 ### Cocumber suite
-> mvn test -PCucumberTests -DBrowser=firefox
+> mvn test -PCucumberTests -Dbrowser=firefox
 
-Or go to src>test>cucumberfeatures And Run TestNGTestRunner.java
+Or o to src>test>cucumberfeatures And Run TestNGTestRunner
 
 ### TestNG suite
 >mvn test -PRegression -Dbrowser=firefox

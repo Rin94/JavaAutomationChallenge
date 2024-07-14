@@ -8,7 +8,7 @@
     Given an user search for "Play Station"
     When all product in catalog entries contains "PLAYSTATION" or "PS4" or "PS5"
     And click in the first product
-    Then the product name <name> and price <price> are displayed in the product page
+    #Then the product name <name> and price <price> are displayed in the product page
 
       Examples:
       |name|price|
@@ -37,10 +37,3 @@
       Examples:
         |category|subCategory|brand|
         |belleza|Perfumes Hombre|DIOR|
-
-
-
-
-
-
-

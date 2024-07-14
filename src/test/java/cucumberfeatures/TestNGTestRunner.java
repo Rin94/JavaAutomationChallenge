@@ -2,9 +2,17 @@ package cucumberfeatures;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-//cucumber->  TestNG, junit
+import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features="src/test/java/cucumberfeatures",glue="stepDefinitions",
-monochrome=true, tags = "@Regression", plugin= {"html:target/cucumber.html"})
+monochrome=true, tags = "@Regression", plugin= {"html:target/cucumber.html",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+"rerun:target/failed_scenarios.txt"})
 public class TestNGTestRunner extends AbstractTestNGCucumberTests{
+
+    @Override
+    @DataProvider(parallel=true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

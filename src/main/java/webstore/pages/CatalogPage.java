@@ -93,6 +93,7 @@ public class CatalogPage extends BasePage{
 		return flag;
 	}
 	public void filterBySize(String size){
+		waitUntilElementIsDisplayed(txtLinkViewMoreSizes, GlobalVariables.DELAY_MEDIUM);
 		clickElement(txtLinkViewMoreSizes);
 		WebElement checkboxLocator = findElementByXpathGivenAString(CatalogPageObjects.XPATH_CHECKBOX_SIZES,size);
 		clickElement(checkboxLocator);
@@ -140,6 +141,7 @@ public class CatalogPage extends BasePage{
 		}
 	}
 	public void clickViewMoreBrandsLink(){
+		waitUntilElementIsDisplayed(txtLinkViewMoreBrands, GlobalVariables.DELAY_MEDIUM);
 		clickElement(txtLinkViewMoreBrands);
 	}
 
