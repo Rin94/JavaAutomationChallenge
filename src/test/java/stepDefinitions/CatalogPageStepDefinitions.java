@@ -60,18 +60,24 @@ public class CatalogPageStepDefinitions {
     @Then("^total count in the catalog is (.+)$")
     public void the_product_name_and_price_are_displayed_in_the_product_page(String count) {
         boolean actualCounting =catalogPage.checkCountInResults(Integer.parseInt(count));
-        Assert.assertTrue(actualCounting);
+        Assert.assertTrue(actualCounting, "The expected number of product matched are not the same");
     }
 
     @Then("^all product contains the same brand (.+)$")
     public void allProductContainsTheSameBrandBrand(String brand) {
         boolean match =catalogPage.verifyProductIsProductCatalog(brand);
-        Assert.assertTrue(match);
+        Assert.assertTrue(match, "The products in catalog page doesn't contain the expected brand: " + brand);
     }
 
     @And("click in view more brands")
     public void clickInViewMoreBrands() {
         catalogPage.clickViewMoreBrandsLink();
+    }
+
+    @Then("all product in catalog entries should contains any of the following items")
+    public void all_product_in_catalog_entries_should_contains_any_of_the_following_items(List<String> data) {
+        boolean match = catalogPage.verifyProductIsProductCatalog(data);
+        Assert.assertTrue(match, "The list doesn't not contains any of the elements: "+data.toString());
     }
 
 

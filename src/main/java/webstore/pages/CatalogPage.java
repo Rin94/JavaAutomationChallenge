@@ -2,12 +2,15 @@ package webstore.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.aventstack.extentreports.ExtentReports;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import basepage.BasePage;
+import org.testng.Assert;
 import org.testng.Reporter;
+import utils.ExtentReporterNG;
 import utils.GlobalVariables;
 import utils.PageScroll;
 import webstore.objectRepository.CatalogPageObjects;
@@ -76,14 +79,12 @@ public class CatalogPage extends BasePage{
 			for (int j=0; j<suggestionList.size();j++){
 				String expectedString =  suggestionList.get(j);
 				if (StringUtils.containsIgnoreCase(result,expectedString)) {
-					Reporter.log(result +" -- is in --"+ expectedString);
 					System.out.println(result +" -- is in --"+ expectedString);
 					flag=true;
 					break;
 				}
 				count=count+1;
 				if(count>=suggestionList.size()){
-					Reporter.log(result +" -- is not --"+ expectedString,0);
 					System.out.println(result +" -- is not --"+ expectedString);
 					flag = false;
 					break;

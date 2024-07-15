@@ -46,7 +46,10 @@ public class BaseTest {
 		else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("-headless");
+			if(headless.equals("yess")){
+				options.addArguments("-headless");
+
+			}
 			driver= new FirefoxDriver(options);
 		}
 		driver.manage().window().maximize();
